@@ -1,13 +1,30 @@
 package com.makemytrip.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.stereotype.Service;
 
-import com.makemytrip.dao.TravelPlanDao;
 import com.makemytrip.entity.TravelPlan;
 
-@Service
-public class TravelPlanService {
+public interface TravelPlanService {
 	
 	
+	//Save Operation
+	public String registerTravelPlan(TravelPlan travelPlan);
+	
+	//Selection Operation
+	public List<TravelPlan> showAllTravelPlan();
+	
+	//For single selection 
+	public TravelPlan showTravelPlanById(Long planId);
+	
+	//Update Operation
+	public String updateTravelPlan(TravelPlan travelPlan);
+	
+	//Delete Operation
+	public String deleteTravelPlan(Long planId);
+	
+	public Map<Integer, String> getTravelPlanCategories();
+
 }
