@@ -2,6 +2,7 @@ package com.makemytrip.service;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,14 +29,17 @@ public class TravelPlanServiceImpl implements TravelPlanService {
 
 	@Override
 	public List<TravelPlan> showAllTravelPlan() {
-		// TODO Auto-generated method stub
-		return null;
+		return travelPlanDao.findAll();
 	}
 
 	@Override
 	public TravelPlan showTravelPlanById(Long planId) {
-		// TODO Auto-generated method stub
-		return null;
+		Optional<TravelPlan> travelPlan = travelPlanDao.findById(planId);
+		
+		if(travelPlan.isPresent())
+			return travelPlan.get();
+		else
+			throw new IllegalArgumentException("planId is not found");
 	}
 
 	@Override

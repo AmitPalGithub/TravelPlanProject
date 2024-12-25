@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import com.makemytrip.entity.TravelPlan;
 
-@Repository
+//@Repository
 public interface TravelPlanDao extends JpaRepository<TravelPlan, Long>{
 	
 

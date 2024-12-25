@@ -39,7 +39,7 @@ public class TravelPlanApiApplication {
 //	    dao.save(tp2);
 	    
 	    
-	    TravelPlanServiceImpl travelPlanServiceImpl = context.getBean(TravelPlanServiceImpl.class, "travelPlanServiceImpl");
+	    TravelPlanServiceImpl travelPlanServiceImpl = context.getBean(TravelPlanServiceImpl.class);
 	    
 	    TravelPlan tp2 = new TravelPlan();
 	    tp2.setPlanName("Singapore 4N/5D");
