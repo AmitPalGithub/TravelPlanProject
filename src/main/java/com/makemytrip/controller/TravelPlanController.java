@@ -50,7 +50,7 @@ public class TravelPlanController {
 	
 	@GetMapping("/edit-plan")
 	public ResponseEntity<TravelPlan> modifyPlan(){
-		return null;
+		return null; 
 	}
 	
 	@GetMapping("/get-travelplanbyid/{planid}")
